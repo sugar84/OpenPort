@@ -1,0 +1,19 @@
+It is a common shell script, what was created with the study goals.
+Sometimes you need to open ports to some hosts for the short time.
+The  script would automate this action for you with default Linux
+firewall netfilter via iptables.
+
+It is very simple to use it/
+Copy file to the directory /bin or /usr/bin, make it executable, 
+set the defaults in the script (host, port, time, proto) and run:
+and run:
+
+openport.sh open 
+
+In this example script uses defaults.
+Or this:
+
+openport.sh open --host 192.168.123.31 --port 80 proto tcp --sleep 10
+
+Script opens tcp-port 80 (www) to the host 192.168.123.31 for the
+10 minutes, after this period it closes port and ends its work.
